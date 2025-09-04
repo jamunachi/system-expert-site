@@ -1,0 +1,19 @@
+<section class="hero">
+  <div class="se-container">
+    <span class="badge">{{ hero.badge or "Introducing System Expert" }}</span>
+    <h1 class="title" style="margin: 14px 0 10px">{{ hero.title or "Operate smarter with an AI-native system expert" }}</h1>
+    <p class="subtitle">{{ hero.subtitle or "Connect data, automate workflows, and surface insights across your ERP—without the busywork." }}</p>
+    <div class="row" style="margin-top: 20px">
+      <a class="btn" href="{{ hero.primary_href or '#get-started' }}">{{ hero.primary_label or "Get Started" }}</a>
+      <a class="btn ghost" href="{{ hero.secondary_href or '#learn-more' }}">{{ hero.secondary_label or "Learn More" }}</a>
+    </div>
+    {% if hero.image %}
+      <div style="margin-top: 36px"><img class="responsive" src="{{ hero.image }}" alt="Product hero"></div>
+    {% endif %}
+    <div class="grid kpis" style="margin-top: 28px">
+      {% for k in (hero.kpis or []) %}
+        <div class="kpi card"><div class="num">{{ k.num }}</div><div class="label">{{ k.label }}</div></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

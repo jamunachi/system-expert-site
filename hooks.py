@@ -1,0 +1,10 @@
+app_name = "system_expert_site"
+app_title = "System Expert Website"
+app_publisher = "Your Name"
+app_description = "Website for System Expert built on ERPNext Website"
+app_icon = "octicon octicon-globe"
+app_color = "blue"
+app_email = "you@example.com"
+app_license = "MIT"
+app_include_css = ["/assets/system_expert_site/css/fonts.css", "/assets/system_expert_site/css/style.css"]
+app_include_js = ["/assets/system_expert_site/js/main.js"]

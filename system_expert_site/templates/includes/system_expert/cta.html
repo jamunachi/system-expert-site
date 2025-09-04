@@ -1,0 +1,15 @@
+<section class="section">
+  <div class="se-container">
+    <div class="cta">
+      <div class="row" style="align-items:center">
+        <div class="col">
+          <h3 style="margin:0 0 6px">{{ cta.title or "Ready to try System Expert?" }}</h3>
+          <p class="subtitle" style="margin:0">{{ cta.subtitle or "Install the app, connect your ERPNext, and ship faster." }}</p>
+        </div>
+        <div class="col" style="flex:0 1 260px; text-align:right">
+          <a class="btn" href="{{ cta.href or '#get-started' }}">{{ cta.label or "Get Started" }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+{% extends "templates/web.html" %}
+{% block title %}{{ (hero.title or "System Expert") ~ " — ERPNext Website" }}{% endblock %}
+{% block page_content %}
+  {% include "system_expert_site/templates/includes/system_expert/hero.html" %}
+  {% include "system_expert_site/templates/includes/system_expert/logos.html" %}
+  {% include "system_expert_site/templates/includes/system_expert/features.html" %}
+  {% include "system_expert_site/templates/includes/system_expert/how_it_works.html" %}
+  {% include "system_expert_site/templates/includes/system_expert/testimonials.html" %}
+  {% include "system_expert_site/templates/includes/system_expert/pricing.html" %}
+  {% include "system_expert_site/templates/includes/system_expert/cta.html" %}
+  {% include "system_expert_site/templates/includes/system_expert/footer.html" %}
+{% endblock %}

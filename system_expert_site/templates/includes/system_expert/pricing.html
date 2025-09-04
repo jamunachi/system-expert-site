@@ -1,0 +1,19 @@
+<section class="section" id="pricing">
+  <div class="se-container">
+    <h2 style="margin:0 0 8px">{{ pricing.title or "Simple pricing" }}</h2>
+    <p class="subtitle" style="margin:0 0 20px">{{ pricing.subtitle or "Start free, grow with your team." }}</p>
+    <div class="grid pricing">
+      {% for p in (pricing.plans or []) %}
+        <div class="card">
+          <h3 style="margin:0 0 8px">{{ p.name }}</h3>
+          <div class="price">{{ p.price }}</div>
+          <small class="mono">{{ p.period }}</small>
+          <ul style="margin: 12px 0 0 18px">
+            {% for feat in p.features %}<li>{{ feat }}</li>{% endfor %}
+          </ul>
+          <div style="margin-top: 14px"><a class="btn" href="{{ p.cta_href or '#get-started' }}">{{ p.cta_label or "Choose plan" }}</a></div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

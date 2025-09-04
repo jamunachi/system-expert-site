@@ -1,0 +1,17 @@
+<section class="section" id="testimonials">
+  <div class="se-container">
+    <h2 style="margin:0 0 8px">{{ testimonials.title or "Loved by operators" }}</h2>
+    <p class="subtitle" style="margin:0 0 20px">{{ testimonials.subtitle or "What teams say about System Expert." }}</p>
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+      {% for t in (testimonials.items or []) %}
+        <div class="card">
+          <p style="font-style: italic;">“{{ t.quote }}”</p>
+          <div class="flex" style="margin-top: 10px">
+            {% if t.avatar %}<img src="{{ t.avatar }}" alt="" style="width:36px;height:36px;border-radius:50%">{% endif %}
+            <div><strong>{{ t.author }}</strong><br><small class="mono">{{ t.role }}</small></div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

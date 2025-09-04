@@ -1,0 +1,8 @@
+graft system_expert_site/public
+graft system_expert_site/www
+graft system_expert_site/templates
+recursive-include system_expert_site *.json
+recursive-include system_expert_site *.md
+recursive-include system_expert_site *.py
+recursive-include system_expert_site *.txt
+recursive-include system_expert_site *.html

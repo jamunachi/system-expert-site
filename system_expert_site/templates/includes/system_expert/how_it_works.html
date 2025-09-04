@@ -1,0 +1,15 @@
+<section class="section" id="how-it-works">
+  <div class="se-container">
+    <h2 style="margin:0 0 8px">{{ how.title or "How it works" }}</h2>
+    <p class="subtitle" style="margin:0 0 20px">{{ how.subtitle or "Three steps to value." }}</p>
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+      {% for s in (how.steps or []) %}
+        <div class="card">
+          <small class="mono">Step {{ loop.index }}</small>
+          <h3 style="margin-top: 6px">{{ s.title }}</h3>
+          <p>{{ s.desc }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+<section class="section" id="features">
+  <div class="se-container">
+    <h2 style="margin:0 0 8px">{{ features.title or "Everything you need to move fast" }}</h2>
+    <p class="subtitle" style="margin:0 0 20px">{{ features.subtitle or "Modular capabilities that snap into your ERPNext workflows." }}</p>
+    <div class="grid features">
+      {% for f in (features.items or []) %}
+        <div class="card">
+          <div class="flex"><span class="icon"></span><h3>{{ f.title }}</h3></div>
+          <p>{{ f.desc }}</p>
+          {% if f.link %}<div style="margin-top: 10px"><a href="{{ f.link }}">Learn more →</a></div>{% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

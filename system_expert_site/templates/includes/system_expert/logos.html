@@ -1,0 +1,13 @@
+<section class="section">
+  <div class="se-container">
+    <small class="mono">{{ logos.heading or "Trusted by modern teams" }}</small>
+    <div class="hr"></div>
+    <div class="row" style="align-items:center; margin-top: 18px">
+      {% for l in (logos.items or []) %}
+        <div class="col" style="flex:0 1 140px; opacity:.85">
+          <img src="{{ l.src }}" alt="{{ l.alt or 'Logo' }}" class="responsive" style="border-radius:0; filter: grayscale(1);">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
